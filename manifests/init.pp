@@ -8,7 +8,7 @@ class logwatch(
   file { '/etc/logwatch/conf/logwatch.conf':
     ensure => present,
     content => template("logwatch/logwatch.conf.erb"),
-    user => 'root',
+    owner => 'root',
     group => 'root',
     mode => 0644,
     require => Package['logwatch']
